@@ -41,7 +41,8 @@ const Login = () => {
 
       toast.success(`Welcome ${user.displayName}`);
       navigate("/");
-    } catch (err) {
+      window.location.reload();
+        } catch (err) {
       toast.error(err.message || "Login failed");
     } finally {
       setLoading(false);
